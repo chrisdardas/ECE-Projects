@@ -32,17 +32,19 @@ This repository serves as a curated archive of my university projects spanning t
 
 ## 📁 Repository Structure
 
+```
 ECE-Projects/
-├── Antennas & Propagation/ # Antenna modeling using 4nec2
-├── Automatic Control Systems/ # Adaptive PID controllers
-├── Data Analysis/ # MATLAB-based data visualization
-├── Databases/ # Game DB schema & SQL queries
-├── Digital Image Processing/ # OpenCV filtering and enhancement
-├── Estimation & Detection Theory/ # Signal parameter estimation
-├── Neural Networks/ # CNN for CIFAR-10 classification
-├── Operating Systems/ # Bash shell & scheduler
-├── Optimization Techniques/ # Genetic & gradient-based optimization
-├── Pattern Recognition & ML/ # PCA, k-NN, SVM
-├── Real Time Embedded Systems/ # Raspberry Pi projects
-├── Robotics/ # Inverse kinematics
-└── Telecommunication Systems/ # Max SNR estimation
+├── Antennas & Propagation/            # Antenna modeling using 4nec2
+├── Automatic Control Systems/         # Adaptive PID controllers
+├── Data Analysis/                     # MATLAB-based data visualization
+├── Databases/                         # Game DB schema & SQL queries
+├── Digital Image Processing/          # OpenCV filtering and enhancement
+├── Estimation & Detection Theory/     # Signal parameter estimation
+├── Neural Networks/                   # CNN for CIFAR-10 classification
+├── Operating Systems/                 # Bash shell & scheduler
+├── Optimization Techniques/           # Genetic & gradient-based optimization
+├── Pattern Recognition & ML/          # PCA, k-NN, SVM
+├── Real Time Embedded Systems/        # Raspberry Pi projects
+├── Robotics/                          # Inverse kinematics
+└── Telecommunication Systems/         # Max SNR estimation
+```
