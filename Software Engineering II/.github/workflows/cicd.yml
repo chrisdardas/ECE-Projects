@@ -1,0 +1,44 @@
+name: cicd
+
+on: push # event that trigger the CI / CD jobs 
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2 # checkout the code
+
+      - name: Setup nodejs
+        uses: actions/setup-node@v2 # setup the nodejs environment
+        with:
+          node-version: 16
+
+      - name: Download Dependencies
+        run: npm install # install all the dependencies defined in the package-json
+        
+      - name: Set permissions for ava and c8
+        run: |
+          chmod +x ./node_modules/.bin/ava
+          chmod +x ./node_modules/.bin/c8
+
+      - name: Run tests
+        run: npm run test # run the ava tests 
+
+      - name: Cypress Run
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm start # start the server
+          wait-on: 'http://localhost:8080/docs' # run the cypress tests on our server
+  
+  cd:
+    runs-on: ubuntu-latest
+    needs: ci # CI needs to be completed before we run the CD job
+
+    steps:
+      - name: Render Deployment # after CI is completed, deploy the server on Render
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.RENDER_SERVICE_ID }} # use the Service ID key provided by Render
+          api-key: ${{ secrets.RENDER_API_KEY }} # use the API key generated from Render
+      

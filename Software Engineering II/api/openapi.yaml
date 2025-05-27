@@ -1,0 +1,589 @@
+openapi: 3.0.3
+info:
+  title: Swagger Thessbooker - OpenAPI 3.0
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+- url: /
+paths:
+  /reservations:
+    get:
+      tags:
+      - reservations
+      summary: Retrieve a list of reservations
+      description: Retrieve a list of all reservations
+      operationId: listReservations
+      responses:
+        "200":
+          description: A list of reservations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Reservation'
+                x-content-type: application/json
+      x-swagger-router-controller: Reservations
+    post:
+      tags:
+      - reservations
+      summary: Make a reservation
+      description: Make a new reservation
+      operationId: makeReservation
+      parameters:
+      - name: RestaurantName
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+        required: true
+      responses:
+        "201":
+          description: Successful Reservation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+      x-swagger-router-controller: Reservations
+  /reservations/{id}:
+    get:
+      tags:
+      - reservations
+      summary: Retrieve a specific reservation
+      description: Retrieve details of a specific reservation
+      operationId: getReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Reservation details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+      x-swagger-router-controller: Reservations
+    put:
+      tags:
+      - reservations
+      summary: Update a reservation
+      description: Update an existing reservation
+      operationId: updateReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: Reservation object that needs to be updated
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+        required: true
+      responses:
+        "200":
+          description: Reservation updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+      x-swagger-router-controller: Reservations
+    delete:
+      tags:
+      - reservations
+      summary: Cancel a reservation
+      description: Cancel an existing reservation
+      operationId: cancelReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Reservation cancelled successfully
+      x-swagger-router-controller: Reservations
+  /preOrder:
+    get:
+      tags:
+      - preorder
+      summary: Retrieve a list of menu items
+      operationId: preOrderGET
+      responses:
+        "200":
+          description: A list of menu items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PreOrder'
+                x-content-type: application/json
+      x-swagger-router-controller: Preorder
+    post:
+      tags:
+      - preorder
+      summary: Create a new menu item
+      operationId: preOrderPOST
+      requestBody:
+        description: Menu item object that needs to be added
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PreOrder'
+        required: true
+      responses:
+        "201":
+          description: Menu item created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PreOrder'
+      x-swagger-router-controller: Preorder
+  /preOrder/{id}:
+    get:
+      tags:
+      - preorder
+      summary: Retrieve a specific menu item
+      operationId: preOrderIdGET
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: restaurant_name
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Menu item details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PreOrder'
+      x-swagger-router-controller: Preorder
+    put:
+      tags:
+      - preorder
+      summary: Update a menu item
+      operationId: preOrderIdPUT
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: restaurant_name
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      requestBody:
+        description: Menu item object that needs to be updated
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PreOrder'
+        required: true
+      responses:
+        "200":
+          description: Menu item updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PreOrder'
+      x-swagger-router-controller: Preorder
+    delete:
+      tags:
+      - preorder
+      summary: Delete a menu item
+      operationId: preOrderIdDELETE
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Menu item deleted successfully
+      x-swagger-router-controller: Preorder
+  /payBookingFee:
+    post:
+      tags:
+      - payment
+      summary: Pay the booking fee
+      description: Last stage of completing the reserevation
+      operationId: payBookingFee
+      requestBody:
+        description: Pay the booking fee of the reservation
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Payment'
+      responses:
+        "200":
+          description: Successful Payment
+          content:
+            application/json:
+              schema:
+                type: boolean
+                x-content-type: application/json
+      x-swagger-router-controller: Payment
+  /directions:
+    get:
+      tags:
+      - directions
+      summary: Retrieve a specific direction
+      operationId: directionsGET
+      parameters:
+      - name: restaurantName
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: direction details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Directions'
+      x-swagger-router-controller: Directions
+  /search:
+    get:
+      tags:
+      - search
+      summary: Retrieve a list of restaurants
+      operationId: searchGET
+      responses:
+        "200":
+          description: A list of restaurants
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Search'
+                x-content-type: application/json
+      x-swagger-router-controller: Search
+  /ratings:
+    get:
+      tags:
+      - ratings
+      summary: Retrieve a list of ratings
+      operationId: ratingsGET
+      parameters:
+      - name: restaurant_name
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: A list of ratings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ratings'
+                x-content-type: application/json
+      x-swagger-router-controller: Ratings
+    post:
+      tags:
+      - ratings
+      summary: Create a new ratings
+      operationId: ratingsPOST
+      parameters:
+      - name: restaurant_name
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      requestBody:
+        description: Ratings object that needs to be added
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ratings'
+        required: true
+      responses:
+        "201":
+          description: Ratings created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ratings'
+      x-swagger-router-controller: Ratings
+  /ratings/{id}:
+    get:
+      tags:
+      - ratings
+      summary: Retrieve a specific rating
+      operationId: ratingsIdGET
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: restaurant_name
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Rating details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ratings'
+      x-swagger-router-controller: Ratings
+    put:
+      tags:
+      - ratings
+      summary: Update a rating
+      operationId: ratingsIdPUT
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: restaurant_name
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      requestBody:
+        description: Rating object that needs to be updated
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ratings'
+        required: true
+      responses:
+        "200":
+          description: Review updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ratings'
+      x-swagger-router-controller: Ratings
+    delete:
+      tags:
+      - ratings
+      summary: Delete a rating
+      operationId: ratingsIdDELETE
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Ratings deleted successfully
+      x-swagger-router-controller: Ratings
+  /reviews:
+    get:
+      tags:
+      - reviews
+      summary: Retrieve a list of reviews
+      operationId: reviewsGET
+      parameters:
+      - name: restaurantName
+        in: query
+        description: The name of the restaurant to filter reviews
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: A list of reviews
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Review'
+                x-content-type: application/json
+      x-swagger-router-controller: Reviews
+components:
+  schemas:
+    Review:
+      type: object
+      properties:
+        id:
+          type: string
+        user_id:
+          type: string
+        restaurant_id:
+          type: string
+        rating:
+          type: number
+        comment:
+          type: string
+      example:
+        user_id: user_id
+        restaurant_id: restaurant_id
+        rating: 0.80082819046101150206595775671303272247314453125
+        comment: comment
+        id: id
+    Ratings:
+      type: object
+      properties:
+        user_id:
+          type: string
+          example: user32
+        restaurant_name:
+          type: string
+          example: mamalouka
+        rating:
+          type: number
+          example: 4.5
+      example:
+        user_id: user32
+        rating: 4.5
+        restaurant_name: mamalouka
+    Search:
+      type: object
+      properties:
+        restaurantName:
+          type: string
+          example: Mamalouka
+        address:
+          type: string
+          example: Leoforou Stratou 34
+      example:
+        address: Leoforou Stratou 34
+        restaurantName: Mamalouka
+    Directions:
+      type: object
+      properties:
+        id:
+          type: string
+        address:
+          type: string
+      example:
+        address: address
+        id: id
+    Payment:
+      type: object
+      properties:
+        cardHolderName:
+          type: string
+          example: John Doe
+        cardNumber:
+          type: string
+          example: "12345678912345680000"
+        CVC:
+          type: number
+          example: 123
+        expirationDate:
+          type: string
+          example: 07/2026
+    PreOrder:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "105"
+        name:
+          type: string
+          example: salat
+        price:
+          type: number
+          example: 7
+        restaurant_name:
+          type: string
+          example: Mamalouka
+      example:
+        price: 7
+        name: salat
+        id: "105"
+        restaurant_name: Mamalouka
+    Reservation:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "105"
+        date:
+          type: string
+          format: date-time
+        time:
+          type: string
+          format: date-time
+        restaurantName:
+          type: string
+          example: Mamalouka
+        allergies:
+          type: string
+          example: Mushrooms
+      example:
+        date: 2000-01-23T04:56:07.000+00:00
+        allergies: Mushrooms
+        restaurantName: Mamalouka
+        id: "105"
+        time: 2000-01-23T04:56:07.000+00:00

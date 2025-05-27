@@ -8,6 +8,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
 ![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-121011?style=flat&logo=gnu-bash&logoColor=white)
+![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/chrisdardas/ECE-Projects)
 ![GitHub last commit](https://img.shields.io/github/last-commit/chrisdardas/ECE-Projects)
@@ -35,6 +36,7 @@ This repository serves as a curated archive of my university projects spanning t
 | [Databases](https://github.com/chrisdardas/ECE-Projects/tree/main/Databases) | Game Database Design & Full Stack Development | 9th | MySQL |
 | [Neural Networks](https://github.com/chrisdardas/ECE-Projects/tree/main/Neural%20Networks) | CIFAR-10 image classification using Deep Learning | 9th | PyTorch, CNNs, Python |
 | [Operating Systems](https://github.com/chrisdardas/ECE-Projects/tree/main/Operating%20Systems) | Basic Bash | 9th | C, Bash |
+| [Software Engineering II](#) | Unit Testing for Backend & Frontend | 9th | Javascript, Ava, Cypress |
 | [Pattern Recognition & ML](https://github.com/chrisdardas/ECE-Projects/tree/main/Pattern%20Recognition%20%26%20Machine%20Learning) | Machine Learning Classification Algorithms , PCA | 9th | Scikit-learn, Python |
 
 ## 📁 Repository Structure
@@ -53,5 +55,6 @@ ECE-Projects/
 ├── Pattern Recognition & ML/          # PCA, k-NN, SVM
 ├── Real Time Embedded Systems/        # Raspberry Pi projects
 ├── Robotics/                          # Inverse kinematics
+├── Software Engineering/              # Unit testing using JavaScript
 └── Telecommunication Systems/         # Max SNR estimation
 ```
