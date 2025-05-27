@@ -29,3 +29,20 @@ This repository serves as a curated archive of my university projects spanning t
 | [Neural Networks](https://github.com/chrisdardas/ECE-Projects/tree/main/Neural%20Networks) | CIFAR-10 image classification using Deep Learning | 9th | PyTorch, CNNs, Python |
 | [Operating Systems](https://github.com/chrisdardas/ECE-Projects/tree/main/Operating%20Systems) | Basic Bash | 9th | C, Bash |
 | [Pattern Recognition & ML](https://github.com/chrisdardas/ECE-Projects/tree/main/Pattern%20Recognition%20%26%20Machine%20Learning) | Machine Learning Classification Algorithms , PCA | 9th | Scikit-learn, Python |
+
+## 📁 Repository Structure
+
+ECE-Projects/
+├── Antennas & Propagation/ # Antenna modeling using 4nec2
+├── Automatic Control Systems/ # Adaptive PID controllers
+├── Data Analysis/ # MATLAB-based data visualization
+├── Databases/ # Game DB schema & SQL queries
+├── Digital Image Processing/ # OpenCV filtering and enhancement
+├── Estimation & Detection Theory/ # Signal parameter estimation
+├── Neural Networks/ # CNN for CIFAR-10 classification
+├── Operating Systems/ # Bash shell & scheduler
+├── Optimization Techniques/ # Genetic & gradient-based optimization
+├── Pattern Recognition & ML/ # PCA, k-NN, SVM
+├── Real Time Embedded Systems/ # Raspberry Pi projects
+├── Robotics/ # Inverse kinematics
+└── Telecommunication Systems/ # Max SNR estimation
