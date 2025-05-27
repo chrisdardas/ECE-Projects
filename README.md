@@ -2,9 +2,9 @@
 📁 A curated collection of my university projects in signal processing, machine learning, embedded systems, and more.  
 👨‍💻 Developed with MATLAB, Python, C, MySQL, Bash, PyTorch, and others.
 
+![GitHub repo size](https://img.shields.io/github/repo-size/chrisdardas/ECE-Projects)
 ![GitHub last commit](https://img.shields.io/github/last-commit/chrisdardas/ECE-Projects)
-![Languages](https://img.shields.io/github/languages/top/chrisdardas/ECE-Projects)
-![Repo Size](https://img.shields.io/github/repo-size/chrisdardas/ECE-Projects)
+![GitHub top language](https://img.shields.io/github/languages/top/chrisdardas/ECE-Projects)
 
 ## 📌 About This Repository
 
