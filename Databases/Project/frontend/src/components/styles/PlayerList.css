@@ -1,0 +1,268 @@
+/* Container Styling */
+.player-list-container {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-light) 100%);
+    background-color: var(--background-dark);
+    background-image: url('../../../public/background.jpg');
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading Styling */
+.player-list-container h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Controls Container */
+.controls {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: var(--card-bg);
+    color: var(--text-light);
+}
+
+.search-bar:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* Sort Dropdown Styling */
+.sort-dropdown {
+    padding: 10px 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: var(--card-bg);
+    color: var(--text-light);
+}
+
+.sort-dropdown:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* Player List Styling */
+.player-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+/* Example: Player Items in a Grid Layout */
+/*
+.player-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+} */
+
+/* Update .player-item for Grid Layout */
+/*.player-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+} */
+
+/* Scrollbar Styling */
+.player-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.player-list::-webkit-scrollbar-track {
+    background: var(--background-dark);
+}
+
+.player-list::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Player Item Styling */
+.player-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-item:hover {
+    background-color: var(--card-hover-bg);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Player Avatar Styling */
+.player-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 2px solid var(--primary-color);
+}
+
+/* Player Name Styling */
+.player-name {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    flex: 1;
+    margin-right: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Player Score Styling */
+.player-score {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+/* View Profile Button Styling */
+.view-profile-button {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-profile-button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .player-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .player-avatar {
+        margin-bottom: 10px;
+    }
+
+    .player-name {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .player-score {
+        margin-left: 0;
+    }
+
+    .view-profile-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Error Message Styling */
+.error-message {
+    color: var(--accent-color);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button, .view-profile-button, .search-bar, .sort-dropdown {
+    transition: all 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --background-dark: #121212;
+    --background-light: #1e1e1e;
+    --card-bg: #1e1e1e;
+    --card-hover-bg: #2c2c2c;
+    --text-light: #e0e0e0;
+    --text-placeholder: #a0a0a0;
+    --primary-color: #64ffda;
+    --accent-color: #ff4081;
+    --tooltip-bg: rgba(0, 0, 0, 0.8);
+    --tooltip-text: #ffffff;
+}
+
+.highlight-button {
+    position: fixed;
+    top: 50px; /* Positioned below the dark-mode-toggle button */
+    right: 10px;
+    padding: 4px 10px;
+    background-color: var(--secondary-color);
+    color: var(--background-light);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.highlight-button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Dark Mode Toggle Button Styling */
+.dark-mode-toggle {
+    position: fixed; /* Fixed position to keep the button in view */
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+

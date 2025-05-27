@@ -1,0 +1,4 @@
+C:\4nec2\out\test_b.nec
+C:\4nec2\out\newb.out
+
+

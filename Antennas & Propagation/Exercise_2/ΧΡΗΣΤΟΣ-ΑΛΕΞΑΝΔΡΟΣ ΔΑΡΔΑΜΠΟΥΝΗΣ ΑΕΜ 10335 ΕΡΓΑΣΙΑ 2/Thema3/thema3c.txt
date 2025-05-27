@@ -1,0 +1,2 @@
+C:\4nec2\out\test_c.nec
+C:\4nec2\out\newc.out

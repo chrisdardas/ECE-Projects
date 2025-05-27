@@ -1,0 +1,28 @@
+/* Container Styling */
+.achievement-container {
+    padding: 20px;
+}
+
+.achievement-container h2 {
+    margin-bottom: 20px;
+}
+
+.achievement-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.achievement-container li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.achievement-container li h3 {
+    margin: 0 0 5px 0;
+}
+
+.achievement-container li p {
+    margin: 0;
+}

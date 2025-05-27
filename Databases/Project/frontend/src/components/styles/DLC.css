@@ -1,0 +1,120 @@
+/* Container Styling */
+.dlc-list-container {
+    padding: 40px 20px;
+    background-color: var(--background-dark);
+    background-image: url('../../../public/background.jpg');
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-light);
+}
+
+/* Heading Styling */
+.dlc-list-container h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* DLC List Styling */
+.dlc-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+/* DLC Item Styling */
+.dlc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects for DLC Items */
+.dlc-item:hover {
+    background-color: var(--card-hover-bg);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* DLC Title Styling */
+.dlc-title {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    flex: 1;
+    margin-right: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* DLC Price Styling */
+.dlc-price {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .dlc-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dlc-title {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .dlc-price {
+        margin-left: 0;
+    }
+}
+
+/* Add a View Details Button */
+.dlc-item button {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dlc-item button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Scrollbar Styling */
+.dlc-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dlc-list::-webkit-scrollbar-track {
+    background: var(--background-dark);
+}
+
+.dlc-list::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}

@@ -1,0 +1,508 @@
+/* --- Existing Styles --- */
+.main-page-container {
+    padding: 40px 20px;
+    background-color: var(--background-dark);
+    background-image: url('../../../public/background.jpg'); 
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-light);
+}
+
+.main-page-container h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.menu {
+    margin-bottom: 30px;
+}
+
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Center the menu items horizontally */
+    align-items: center;     /* Center the menu items vertically */
+}
+
+.menu .voltage-button {
+    background-color: var(--card-bg);
+    padding: 12px 24px; /* Increased padding for a button-like size */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.menu .menu-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Center text within the button */
+}
+
+.menu .voltage-button:hover {
+    background-color: var(--card-hover-bg);
+    transform: translateY(-5px);
+}
+
+.menu .menu-link:hover {
+    color: var(--primary-color); /* Optional: Change text color on hover */
+}
+
+/* --- Ensure SVG and Dots Align Within Buttons --- */
+
+.menu .voltage-svg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu .dots {
+    /* Optional: Adjust positioning if necessary */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.menu .voltage-button {
+    background-color: var(--card-bg);
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    min-width: 150px;
+}
+
+.menu .voltage-button:hover {
+    background-color: var(--card-hover-bg);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu .voltage-button:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu .voltage-button .menu-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
+}
+
+@keyframes fly-up {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.2);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(-1.5rem) scale(0.4);
+    }
+
+    10%, 100% {
+        opacity: 0;
+        transform: translateY(-3rem) scale(0.2);
+    }
+}
+
+/* Fly-Down Animation */
+@keyframes fly-down {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.2);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(1.5rem) scale(0.4);
+    }
+
+    10%, 100% {
+        opacity: 0;
+        transform: translateY(3rem) scale(0.2);
+    }
+}
+
+@keyframes spark-1 {
+    to {
+        stroke-dashoffset: -1000;
+    }
+}
+
+@keyframes spark-2 {
+    to {
+        stroke-dashoffset: -500;
+    }
+}
+
+/* Ensure SVG and Dots are positioned correctly within menu links */
+.menu .voltage-svg {
+    position: absolute;
+    top: -0.75em;
+    left: -0.25em;
+    width: calc(100% + 0.5em);
+    height: calc(100% + 1.5em);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+    transition-delay: 0.1s;
+    z-index: 0;
+    filter: url("#glow");
+}
+
+.menu .voltage-button:hover .voltage-svg {
+    opacity: 1;
+}
+
+.menu .dots {
+    opacity: 0;
+    transition: opacity 0.3s;
+    transition-delay: 0.4s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.menu .voltage-button:hover .dots {
+    opacity: 1;
+}
+
+.menu .dots .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: white;
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+.menu .dots .dot-1 {
+    top: 0;
+    left: 20%;
+    animation: fly-up 3s linear infinite;
+}
+
+.menu .dots .dot-2 {
+    top: 0;
+    left: 55%;
+    animation: fly-up 3s linear infinite;
+    animation-delay: 0.5s;
+}
+
+.menu .dots .dot-3 {
+    top: 0;
+    left: 80%;
+    animation: fly-up 3s linear infinite;
+    animation-delay: 1s;
+}
+
+.menu .dots .dot-4 {
+    bottom: 0;
+    left: 30%;
+    animation: fly-down 3s linear infinite;
+    animation-delay: 2.5s;
+}
+
+.menu .dots .dot-5 {
+    bottom: 0;
+    left: 65%;
+    animation: fly-down 3s linear infinite;
+    animation-delay: 1.5s;
+}
+
+/* --- Voltage Button Styles --- */
+
+.voltage-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between buttons */
+    justify-content: center; /* Center the buttons horizontally */
+    margin-bottom: 30px; /* Space below the buttons */
+}
+
+.voltage-button {
+    position: relative;
+    display: inline-block; /* Prevent buttons from stretching */
+    margin: 10px; /* Add spacing between buttons */
+}
+
+.voltage-button button {
+    color: white;
+    background: #0D1127;
+    padding: 0.5rem 1.5rem; /* Adjust padding as needed */
+    border-radius: 5rem;
+    border: 3px solid #5978F3; /* Thinner border for a more subtle look */
+    font-size: 1rem;
+    line-height: 1em;
+    letter-spacing: 0.075em;
+    transition: background 0.3s, transform 0.2s;
+    position: relative;
+    z-index: 1; /* Keep button above decorative elements */
+    cursor: pointer;
+}
+
+.voltage-button button:hover {
+    background: #0F1C53;
+    transform: scale(1.05);
+}
+
+/* SVG Decorative Element */
+.voltage-button svg {
+    display: block;
+    position: absolute;
+    top: -0.75em;
+    left: -0.25em;
+    width: calc(100% + 0.5em);
+    height: calc(100% + 1.5em);
+    pointer-events: none; /* Prevent SVG from blocking button clicks */
+    opacity: 0;
+    transition: opacity 0.4s;
+    transition-delay: 0.1s;
+    z-index: 0; /* Place SVG behind the button */
+    filter: url("#glow");
+}
+
+.voltage-button:hover svg {
+    opacity: 1;
+}
+
+/* SVG Path Styles */
+.voltage-button svg path {
+    stroke-dasharray: 100;
+}
+
+/* Specific Path Animations */
+.voltage-button svg path.line-1 {
+    stroke: #f6de8d;
+    stroke-dashoffset: 0;
+    animation: spark-1 3s linear infinite;
+}
+
+.voltage-button svg path.line-2 {
+    stroke: #6bfeff;
+    stroke-dashoffset: 500;
+    animation: spark-2 3s linear infinite;
+}
+
+/* Dots Decorative Elements */
+.voltage-button .dots {
+    opacity: 0;
+    transition: opacity 0.3s;
+    transition-delay: 0.4s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Prevent dots from blocking button clicks */
+    z-index: 0; /* Place dots behind the button */
+}
+
+.voltage-button:hover .dots {
+    opacity: 1;
+}
+
+.voltage-button .dots .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: white;
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+/* Individual Dot Animations */
+.voltage-button .dots .dot-1 {
+    top: 0;
+    left: 20%;
+    animation: fly-up 3s linear infinite;
+}
+
+.voltage-button .dots .dot-2 {
+    top: 0;
+    left: 55%;
+    animation: fly-up 3s linear infinite;
+    animation-delay: 0.5s;
+}
+
+.voltage-button .dots .dot-3 {
+    top: 0;
+    left: 80%;
+    animation: fly-up 3s linear infinite;
+    animation-delay: 1s;
+}
+
+.voltage-button .dots .dot-4 {
+    bottom: 0;
+    left: 30%;
+    animation: fly-down 3s linear infinite;
+    animation-delay: 2.5s;
+}
+
+.voltage-button .dots .dot-5 {
+    bottom: 0;
+    left: 65%;
+    animation: fly-down 3s linear infinite;
+    animation-delay: 1.5s;
+}
+
+/* Keyframe Animations */
+
+/* Spark Animations */
+@keyframes spark-1 {
+    to {
+        stroke-dashoffset: -1000;
+    }
+}
+
+@keyframes spark-2 {
+    to {
+        stroke-dashoffset: -500;
+    }
+}
+
+/* Fly-Up Animation */
+@keyframes fly-up {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.2);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(-1.5rem) scale(0.4);
+    }
+
+    10%, 100% {
+        opacity: 0;
+        transform: translateY(-3rem) scale(0.2);
+    }
+}
+
+/* Fly-Down Animation */
+@keyframes fly-down {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.2);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(1.5rem) scale(0.4);
+    }
+
+    10%, 100% {
+        opacity: 0;
+        transform: translateY(3rem) scale(0.2);
+    }
+}
+
+/* --- Additional Button Styles for More Colors --- */
+
+.primary-button {
+    padding: 6px 12px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--button-primary-hover); /* Define in :root */
+    transform: scale(1.05);
+}
+
+.secondary-button {
+    padding: 6px 12px;
+    background-color: var(--accent-color);
+    color: var(--background-dark);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.secondary-button:hover {
+    background-color: var(--button-secondary-hover); /* Define in :root */
+    transform: scale(1.05);
+}
+
+/* --- Accessibility Enhancements --- */
+
+button:focus {
+    outline: 2px dashed var(--accent-color);
+    outline-offset: 4px;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 768px) {
+    .main-page-container h1 {
+        font-size: 2rem;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        padding: 8px 12px;
+    }
+
+    .voltage-button button {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .primary-button, .secondary-button, .logout-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+

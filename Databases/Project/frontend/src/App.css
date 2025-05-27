@@ -1,0 +1,114 @@
+:root {
+  --primary-color: #00ffea;
+  --accent-color: #ff5733;
+  --background-dark: #1a1a1a;
+  --background-header: #000000;
+  --text-light: #f0f0f0;
+  --card-bg: #2c2c2c;
+  --card-hover-bg: #3d3d3d;
+  --font-primary: 'Roboto', sans-serif;
+  --font-gaming: 'Press Start 2P', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+
+.App {
+  text-align: center;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  font-family: var(--font-primary);
+}
+
+.App-header {
+  background-color: var(--background-header);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--text-light);
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('../public/background.jpg');  /* Updated Path */
+  background-size: cover;
+  background-position: center;
+} 
+
+h1 {
+  font-family: var(--font-gaming);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-shadow: 2px 2px #ff5733;
+}
+
+.App-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.App-link:hover {
+  color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+li {
+  background-color: var(--card-bg);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+}
+
+li:hover {
+  background-color: var(--card-hover-bg);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--background-dark);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: var(--font-primary);
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+
+  li {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,72 @@
+.login-container {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.login-container h2 {
+    font-family: var(--font-gaming);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-light);
+}
+
+.login-form input {
+    width: 89%;
+    padding: 10px;
+    border: 1px solid var(--card-hover-bg);
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-light);
+    font-family: var(--font-primary);
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: var(--font-primary);
+}
+
+.login-form button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.create-account-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: var(--font-primary);
+}
+
+.create-account-button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
