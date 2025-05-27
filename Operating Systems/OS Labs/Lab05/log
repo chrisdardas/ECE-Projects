@@ -1,0 +1,40 @@
+/home/chridard/Lab05
+total 16
+drwxrwxr-x  2 chridard chridard 4096 Dec 16 12:52 .
+-rw-rw-r--  1 chridard chridard   21 Dec 16 12:52 log
+drwxr-xr-x 16 chridard chridard 4096 Dec 16 12:52 ..
+-rw-rw-r--  1 chridard chridard  531 Dec 16 12:34 new_log1
+  File: log
+  Size: 248       	Blocks: 8          IO Block: 4096   regular file
+Device: 811h/2065d	Inode: 302299      Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1270/chridard)   Gid: ( 1272/chridard)
+Access: 2024-12-16 12:52:51.902828357 +0200
+Modify: 2024-12-16 12:53:00.394877978 +0200
+Change: 2024-12-16 12:53:00.394877978 +0200
+ Birth: -
+./log
+/home/chridard/Lab05
+total 16
+drwxrwxr-x  2 chridard chridard 4096 Dec 16 12:52 .
+-rw-rw-r--  1 chridard chridard   21 Dec 16 12:52 log
+drwxr-xr-x 16 chridard chridard 4096 Dec 16 12:52 ..
+-rw-rw-r--  1 chridard chridard  531 Dec 16 12:34 new_log1
+  File: log
+  Size: 248       	Blocks: 8          IO Block: 4096   regular file
+Device: 811h/2065d	Inode: 302299      Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1270/chridard)   Gid: ( 1272/chridard)
+Access: 2024-12-16 12:52:51.902828357 +0200
+Modify: 2024-12-16 12:53:00.394877978 +0200
+Change: 2024-12-16 12:53:00.394877978 +0200
+ Birth: -
+./log
+/home/chridard/Lab05
+total 16
+drwxrwxr-x  2 chridard chridard 4096 Dec 16 12:52 .
+-rw-rw-r--  1 chridard chridard   21 Dec 16 12:52 log
+drwxr-xr-x 16 chridard chridard 4096 Dec 16 12:52 ..
+-rw-rw-r--  1 chridard chridard  531 Dec 16 12:34 new_log1
+  File: log
+  Size: 248       	Blocks: 8          IO Block: 4096   regular file
+Device: 811h/2065d	Inode: 302299      Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1270/chridard)   Gid: ( 1272/chridard)
