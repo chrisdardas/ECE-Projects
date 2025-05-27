@@ -28,7 +28,7 @@ This repository serves as a curated archive of my university projects spanning t
 | [Antennas & Propagation](https://github.com/chrisdardas/ECE-Projects/tree/main/Antennas%20%26%20Propagation) | Antenna Design & Simulation | 7th | MATLAB, 4nec2 |
 | [Automatic Control Systems](https://github.com/chrisdardas/ECE-Projects/tree/main/Automatic%20Control%20Systems) | Adaptive Control & Simulation | 7th | MATLAB |
 | [Optimization Techniques](https://github.com/chrisdardas/ECE-Projects/tree/main/Optimization%20Techniques) | Genetic Algorithms & Steepest Descent | 7th | MATLAB |
-| [Robotics](https://github.com/chrisdardas/ECE-Projects/tree/main/Robotics) | Robot Arm Control | 8th | MATLAB |
+| [Robotics](https://github.com/chrisdardas/ECE-Projects/tree/main/Robotics) | Robotic Arm Control | 8th | MATLAB |
 | [Digital Image Processing](https://github.com/chrisdardas/ECE-Projects/tree/main/Digital%20Image%20Processing) | Image Processing | 8th | Python, OpenCV |
 | [Estimation & Detection Theory](https://github.com/chrisdardas/ECE-Projects/tree/main/Estimation%20%26%20Detection%20Theory) | Parameter & Distribution Estimation | 8th | MATLAB |
 | [Real-Time Embedded Systems](https://github.com/chrisdardas/ECE-Projects/tree/main/Real%20Time%20Embeeded%20Systems) | Rasberry Pi Real Time Project | 8th | C |
