@@ -4,7 +4,7 @@
 ![Language](https://img.shields.io/badge/language-C-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Raspberry%20Pi-lightgrey.svg)
 
-Welcome to the **Real-Time Embedded Systems** project repository! This collection showcases hands-on assignments developed during the Real-Time Embedded Systems course at the [School of Electrical and Computer Engineering](https://ee.auth.gr), Aristotle University of Thessaloniki.
+Welcome to the **Real-Time Embedded Systems** project repository! This collection showcases hands-on assignments developed during the Real-Time Embedded Systems course at the [School of Electrical and Computer Engineering](https://ece.auth.gr/), Aristotle University of Thessaloniki.
 
 > 🛠️ Focused on real-time scheduling, concurrency, inter-process communication, and low-level hardware interaction using C and the POSIX threads API.
 
@@ -14,14 +14,6 @@ Welcome to the **Real-Time Embedded Systems** project repository! This collectio
 
 - [🚀 Overview](#-overview)
 - [🧠 Core Concepts](#-core-concepts)
-- [📁 Project Structure](#-project-structure)
-- [🔧 Getting Started](#-getting-started)
-- [📦 Prerequisites](#-prerequisites)
-- [🛠 Installation](#-installation)
-- [▶️ Usage](#️-usage)
-- [🤝 Contributing](#-contributing)
-- [📝 License](#-license)
-- [🎓 Acknowledgments](#-acknowledgments)
 
 ---
 
