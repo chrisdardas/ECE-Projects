@@ -16,5 +16,5 @@ The projects focus on the analysis and design of control systems, covering topic
 
 - Time-domain and frequency-domain analysis
 - Stability and performance criteria
-- PID controller design
 - State-space representation and control
+- Adaptive Control
