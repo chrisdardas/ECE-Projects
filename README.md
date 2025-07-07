@@ -29,6 +29,7 @@ This repository serves as a curated archive of my university projects spanning t
 | [Automatic Control Systems](https://github.com/chrisdardas/ECE-Projects/tree/main/Automatic%20Control%20Systems) | Adaptive Control & Simulation | 7th | MATLAB |
 | [Optimization Techniques](https://github.com/chrisdardas/ECE-Projects/tree/main/Optimization%20Techniques) | Genetic Algorithms & Steepest Descent | 7th | MATLAB |
 | [Robotics](https://github.com/chrisdardas/ECE-Projects/tree/main/Robotics) | Robotic Arm Control | 8th | MATLAB |
+| [Simulation & Modeling](https://github.com/chrisdardas/ECE-Projects/tree/main/Simulation-Modelling) | Simulation & Parameter Estimation | 8th | MATLAB |
 | [Digital Image Processing](https://github.com/chrisdardas/ECE-Projects/tree/main/Digital%20Image%20Processing) | Image Processing | 8th | Python, OpenCV |
 | [Estimation & Detection Theory](https://github.com/chrisdardas/ECE-Projects/tree/main/Estimation%20%26%20Detection%20Theory) | Parameter & Distribution Estimation | 8th | MATLAB |
 | [Real-Time Embedded Systems](https://github.com/chrisdardas/ECE-Projects/tree/main/Real%20Time%20Embeeded%20Systems) | Rasberry Pi Real Time Project | 8th | C |
@@ -55,6 +56,7 @@ ECE-Projects/
 ├── Pattern Recognition & ML/          # PCA, k-NN, SVM
 ├── Real Time Embedded Systems/        # Raspberry Pi projects
 ├── Robotics/                          # Inverse kinematics
+├── Simulation & Modeling/             # Simulation and estimation of parameters using offline and online methods
 ├── Software Engineering/              # Unit testing using JavaScript
 └── Telecommunication Systems/         # Max SNR estimation
 ```
