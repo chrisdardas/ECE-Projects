@@ -10,9 +10,9 @@ This repository contains simulation and modelling projects developed as part of 
 
 - [Overview](#overview)
 - [Projects](#projects)
-  - [Project A: Monte Carlo Simulation](#project-a-monte-carlo-simulation)
-  - [Project B: System Modelling](#project-b-system-modelling)
-  - [Project C: Queueing Theory Simulator](#project-c-queueing-theory-simulator)
+  - [Project A: Offline Least Squares Method](#project-a-offline-least-squares-method)
+  - [Project B: Online Estimation Methods](#project-b-online-estimation-methods)
+  - [Project C: Robust Online Parameter Estimation](#project-c-robust-online-parameter-estimation)
 - [Usage](#usage)
 - [Requirements](#requirements)
 - [Contributing](#contributing)
@@ -20,28 +20,40 @@ This repository contains simulation and modelling projects developed as part of 
 
 ## Overview
 
-This collection of MATLAB-based simulation projects explores foundational concepts in system modelling and numerical methods, including:
+This collection of MATLAB-based simulation projects explores essential methods in system identification and real-time parameter estimation, including:
 
-- Monte Carlo simulation and statistical analysis  
-- Dynamic system modelling with MATLAB’s Simulink  
-- Queueing theory and performance evaluation  
+- Offline and online parameter estimation
+- Gradient-based adaptation
+- Stability and convergence analysis
+- Real-time simulation of dynamic systems
 
 ## Projects
 
-### 🧮 Project A: Monte Carlo Simulation
-- Simulates random events to estimate statistical properties (e.g., mean, variance).
-- Demonstrates convergence behavior based on increasing sample size.
+### 🧮 Project A: Offline Least Squares Method
 
-### 🔧 Project B: System Modelling
-- Models continuous-time systems using difference equations or transfer functions.
-- Simulates time-domain responses to various inputs (step, impulse, sine).
+- Implements classic Least Squares (LS) to estimate system parameters using pre-recorded data.
+- Processes all data at once to minimize squared error between model outputs and measured values.
+- Useful for accurate parameter identification when the full dataset is available.
 
-### ⏱️ Project C: Queueing Theory Simulator
-- Simulates M/M/1 and/or M/M/c queueing systems.
-- Evaluates performance metrics: average waiting time, queue length, utilization.
+### 🔄 Project B: Online Estimation Methods
+
+- Introduces real-time (online) estimation techniques such as:
+  - Gradient descent
+  - Recursive least squares (RLS)
+  - Lyapunov-based update rules
+- Parameters are updated incrementally as new measurements become available.
+- Enables adaptive behaviour in dynamic systems.
+
+### 🛡️ Project C: Robust Online Parameter Estimation
+
+- Enhances online methods with:
+  - Projection algorithms to enforce parameter constraints
+  - Normalization techniques for boundedness
+  - Lyapunov stability analysis
+- Supports robust, stable adaptation under real-time constraints and uncertain data.
 
 ## Usage
 
-1. Clone this repository:  
+1. Clone this repository:
    ```bash
    git clone https://github.com/chrisdardas/ECE-Projects.git
