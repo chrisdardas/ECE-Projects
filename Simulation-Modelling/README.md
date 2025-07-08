@@ -10,13 +10,9 @@ This repository contains simulation and modelling projects developed as part of 
 
 - [Overview](#overview)
 - [Projects](#projects)
-  - [Project A: Offline Least Squares Method](./Lab01)
-  - [Project B: Online Estimation Methods](./Lab02)
-  - [Project C: Robust Online Parameter Estimation](./Project)
-- [Usage](#usage)
-- [Requirements](#requirements)
-- [Contributing](#contributing)
-- [License](#license)
+  - [Project A: Offline Least Squares Method](./Lab01/Lab01.pdf)
+  - [Project B: Online Estimation Methods](./Lab02/Lab02.pdf)
+  - [Project C: Robust Online Parameter Estimation](./Project/Project.pdf)
 
 ## Overview
 
@@ -51,9 +47,3 @@ This collection of MATLAB-based simulation projects explores essential methods i
   - Normalization techniques for boundedness
   - Lyapunov stability analysis
 - Supports robust, stable adaptation under real-time constraints and uncertain data.
-
-## Usage
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/chrisdardas/ECE-Projects.git
