@@ -10,9 +10,9 @@ This repository contains simulation and modelling projects developed as part of 
 
 - [Overview](#overview)
 - [Projects](#projects)
-  - [Project A: Offline Least Squares Method](#project-a-offline-least-squares-method)
-  - [Project B: Online Estimation Methods](#project-b-online-estimation-methods)
-  - [Project C: Robust Online Parameter Estimation](#project-c-robust-online-parameter-estimation)
+  - [Project A: Offline Least Squares Method](./Lab01)
+  - [Project B: Online Estimation Methods](./Lab02)
+  - [Project C: Robust Online Parameter Estimation](./Project)
 - [Usage](#usage)
 - [Requirements](#requirements)
 - [Contributing](#contributing)
