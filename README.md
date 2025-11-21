@@ -27,7 +27,7 @@
 - [Key Project Highlights](#-key-project-highlights)
 - [Repository Structure](#-repository-structure)
 - [Getting Started](#-getting-started)
-- [Technologies Used](#-technologies-used)
+- [Technologies Used](#️-technologies-used)
 - [Contact](#-contact)
 - [License](#-license)
 - [Acknowledgements](#-acknowledgements)
