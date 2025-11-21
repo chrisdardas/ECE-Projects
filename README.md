@@ -193,7 +193,7 @@ main.m  % Or the specific entry point file
 - **4nec2** - Antenna modeling and simulation
 - **Jupyter Notebook** - Interactive computing environment
 - **Git** - Version control
-- **AVA & Cypress** - Testing frameworks
+- **Ava & Cypress** - Testing frameworks
 
 ---
 
