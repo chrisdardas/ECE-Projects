@@ -28,9 +28,7 @@
 - [Repository Structure](#-repository-structure)
 - [Getting Started](#-getting-started)
 - [Technologies Used](#️-technologies-used)
-- [Contact](#-contact)
 - [License](#-license)
-- [Acknowledgements](#-acknowledgements)
 
 ## 📌 About This Repository
 
@@ -197,27 +195,8 @@ main.m  % Or the specific entry point file
 
 ---
 
-## 📧 Contact
-
-**Christos Dardas**
-
-- 📧 Email: [your-email@example.com](mailto:your-email@example.com)
-- 💼 LinkedIn: [linkedin.com/in/chrisdardas](https://linkedin.com/in/chrisdardas)
-- 🐙 GitHub: [@chrisdardas](https://github.com/chrisdardas)
-
-Feel free to reach out if you have questions about any of the projects or would like to discuss potential collaborations!
-
----
-
 ## 📄 License
 
 This repository is licensed under the MIT License - see the individual project folders for specific licensing information.
 
 ---
-
-## 🙏 Acknowledgements
-
-- **Aristotle University of Thessaloniki** - School of Electrical and Computer Engineering
-- Course instructors and professors for their guidance and support
-- Fellow students and collaborators who contributed to team projects
-- Open-source community for the excellent tools and libraries used throughout these projects
