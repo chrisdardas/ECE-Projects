@@ -47,45 +47,69 @@ Each folder corresponds to a specific subject or course and contains well-docume
 
 | Subject | Project | Semester | Tools/Technologies |
 |--------|---------|----------|---------------------|
-| [Telecommunication Systems](https://github.com/chrisdardas/ECE-Projects/tree/main/Telecommunication%20Systems) | Parameter Estimation for maximum SNR | 6th | MATLAB |
-| [Antennas & Propagation](https://github.com/chrisdardas/ECE-Projects/tree/main/Antennas%20%26%20Propagation) | Antenna Design & Simulation | 7th | MATLAB, 4nec2 |
-| [Automatic Control Systems](https://github.com/chrisdardas/ECE-Projects/tree/main/Automatic%20Control%20Systems) | Adaptive Control & Simulation | 7th | MATLAB |
-| [Optimization Techniques](https://github.com/chrisdardas/ECE-Projects/tree/main/Optimization%20Techniques) | Genetic Algorithms & Steepest Descent | 7th | MATLAB |
-| [Robotics](https://github.com/chrisdardas/ECE-Projects/tree/main/Robotics) | Robotic Arm Control | 8th | MATLAB |
-| [Simulation & Modeling](https://github.com/chrisdardas/ECE-Projects/tree/main/Simulation-Modelling) | Simulation & Parameter Estimation | 8th | MATLAB |
-| [Digital Image Processing](https://github.com/chrisdardas/ECE-Projects/tree/main/Digital%20Image%20Processing) | Image Processing | 8th | Python, OpenCV |
-| [Estimation & Detection Theory](https://github.com/chrisdardas/ECE-Projects/tree/main/Estimation%20%26%20Detection%20Theory) | Parameter & Distribution Estimation | 8th | MATLAB |
-| [Real-Time Embedded Systems](https://github.com/chrisdardas/ECE-Projects/tree/main/Real%20Time%20Embedded%20Systems) | Raspberry Pi Real Time Project | 8th | C |
-| [Data Analysis](https://github.com/chrisdardas/ECE-Projects/tree/main/Data%20Analysis) | Statistical Analysis & Visualization | 9th | MATLAB |
-| [Databases](https://github.com/chrisdardas/ECE-Projects/tree/main/Databases) | Game Database Design & Full Stack Development | 9th | MySQL |
-| [Neural Networks](https://github.com/chrisdardas/ECE-Projects/tree/main/Neural%20Networks) | CIFAR-10 image classification using Deep Learning | 9th | PyTorch, CNNs, Python |
-| [Operating Systems](https://github.com/chrisdardas/ECE-Projects/tree/main/Operating%20Systems) | Basic Bash | 9th | C, Bash |
-| [Software Engineering II](https://github.com/chrisdardas/ECE-Projects/tree/main/Software%20Engineering%20II) | Unit Testing for Backend & Frontend | 9th | Javascript, Ava, Cypress |
-| [Pattern Recognition & ML](https://github.com/chrisdardas/ECE-Projects/tree/main/Pattern%20Recognition%20%26%20Machine%20Learning) | Machine Learning Classification Algorithms, PCA | 9th | Scikit-learn, Python |
+| [Telecommunication Systems](./Telecommunication%20Systems) | SNR Optimization & Parameter Estimation | 6th | MATLAB |
+| [Antennas & Propagation](./Antennas%20%26%20Propagation) | Antenna Design, Radiation Patterns & Array Beamforming | 7th | MATLAB, 4nec2 |
+| [Automatic Control Systems](./Automatic%20Control%20Systems) | Classical Control & Model Reference Adaptive Control (MRAC) | 7th | MATLAB, Simulink |
+| [Optimization Techniques](./Optimization%20Techniques) | Steepest Descent, Constrained Optimization & Genetic Algorithms | 7th | MATLAB |
+| [Robotics](./Robotics) | UR5 Robot Inverse Kinematics & Trajectory Planning | 8th | MATLAB |
+| [Simulation & Modeling](./Simulation-Modelling) | Offline/Online Parameter Estimation (LS, RLS, Gradient Descent) | 8th | MATLAB |
+| [Digital Image Processing](./Digital%20Image%20Processing) | Histogram Equalization, Document Scanning & Wiener Filtering | 8th | Python, OpenCV |
+| [Estimation & Detection Theory](./Estimation%20%26%20Detection%20Theory) | MLE, MMSE & Detection Theory | 8th | MATLAB |
+| [Real-Time Embedded Systems](./Real%20Time%20Embedded%20Systems) | Producer-Consumer, Real-Time Stock Data Processing | 8th | C, pthreads |
+| [Data Analysis](./Data%20Analysis) | Statistical Analysis, Regression & Hypothesis Testing | 9th | MATLAB |
+| [Databases](./Databases) | Full-Stack Game Database (MySQL + React + Node.js) | 9th | MySQL, JavaScript, React |
+| [Neural Networks](./Neural%20Networks) | CIFAR-10 Classification with MLP, CNN, RBF & SVM | 9th | PyTorch, Python |
+| [Operating Systems](./Operating%20Systems) | Process Management, IPC & Shell Scripting | 9th | C, Bash |
+| [Software Engineering II](./SE2_Project) | Unit Testing (Ava) & E2E Testing (Cypress) | 9th | JavaScript, Ava, Cypress |
+| [Pattern Recognition & ML](./Pattern%20Recognition%20%26%20Machine%20Learning) | PCA, K-NN, SVM & Random Forest Classification | 9th | Scikit-learn, Python |
 
 ---
 
 ## 🌟 Key Project Highlights
 
 ### 🔥 Neural Networks - CIFAR-10 Classification
-Deep learning project implementing Convolutional Neural Networks (CNNs) for image classification on the CIFAR-10 dataset. Achieved high accuracy using PyTorch and modern deep learning techniques.
+Deep learning project implementing multiple neural network architectures for image classification on the CIFAR-10 dataset, comparing traditional and deep learning approaches.
 
 **Key Features:**
-- Custom CNN architecture design
-- Data augmentation and preprocessing
-- Model training and evaluation
-- Performance visualization and analysis
+- Multi-Layer Perceptron (MLP) implementation from scratch
+- Custom Convolutional Neural Network (CNN) architecture
+- Radial Basis Function (RBF) networks
+- Support Vector Machine (SVM) comparison
+- Data augmentation and regularization techniques
+- Comprehensive performance analysis and visualization
 
 ### 🎮 Full-Stack Database Application
-End-to-end development of a game database system, including database design, backend API, and frontend interface.
+End-to-end development of a game database system with complete backend API and modern React frontend.
 
-**Technologies:** MySQL, JavaScript, React, Node.js
+**Technologies:** MySQL, JavaScript, React, Node.js, Express, JWT Authentication
 
-### 🤖 Robotics - Inverse Kinematics
-Implementation of robotic arm control using inverse kinematics algorithms in MATLAB, enabling precise manipulation and trajectory planning.
+**Features:**
+- RESTful API design
+- User authentication
+- CRUD operations
+- Docker containerization
+
+### ⚙️ Real-Time Embedded Systems - Stock Data Processing
+Multi-threaded real-time application for processing live financial data on Raspberry Pi.
+
+**Key Features:**
+- WebSocket connection to Finnhub API
+- Producer-consumer pattern with bounded buffer
+- Candlestick chart generation
+- Moving average calculations
+- POSIX threads synchronization
+
+### 🤖 Robotics - UR5 Inverse Kinematics
+Implementation of robotic arm control using inverse kinematics algorithms in MATLAB for the UR5 industrial robot.
+
+**Key Features:**
+- DH parameter modeling
+- Forward and inverse kinematics
+- Trajectory planning
+- 3D visualization
 
 ### 📡 Antenna Design & Simulation
-Advanced antenna modeling and simulation using 4nec2 software, analyzing radiation patterns, impedance matching, and propagation characteristics.
+Advanced antenna modeling and simulation using 4nec2 software, analyzing radiation patterns, impedance matching, and array configurations.
 
 ---
 
@@ -93,21 +117,21 @@ Advanced antenna modeling and simulation using 4nec2 software, analyzing radiati
 
 ```
 ECE-Projects/
-├── Antennas & Propagation/              # Antenna modeling and simulation using 4nec2
-├── Automatic Control Systems/           # Adaptive PID controllers and control theory
-├── Data Analysis/                       # Statistical analysis and MATLAB-based visualization
-├── Databases/                           # Full-stack game database with MySQL & React
-├── Digital Image Processing/            # OpenCV filtering, enhancement, and segmentation
-├── Estimation & Detection Theory/       # Signal parameter estimation techniques
-├── Neural Networks/                     # Deep learning with CNNs for CIFAR-10
-├── Operating Systems/                   # Custom bash shell implementation & schedulers
-├── Optimization Techniques/             # Genetic algorithms & gradient-based optimization
-├── Pattern Recognition & ML/            # PCA, k-NN, SVM, and classification algorithms
-├── Real Time Embedded Systems/          # Raspberry Pi real-time projects in C
-├── Robotics/                            # Robotic arm control and inverse kinematics
-├── Simulation-Modelling/                # Parameter estimation using offline/online methods
-├── SE2_Project/                         # Software Engineering II - Unit & integration testing
-└── Telecommunication Systems/           # Maximum SNR estimation for communication systems
+├── Antennas & Propagation/              # Antenna modeling, radiation patterns, array design
+├── Automatic Control Systems/           # Classical control & MRAC adaptive control
+├── Data Analysis/                       # Statistical analysis, regression, hypothesis testing
+├── Databases/                           # Full-stack game database (MySQL + React + Node.js)
+├── Digital Image Processing/            # Histogram equalization, document scanning, Wiener filtering
+├── Estimation & Detection Theory/       # MLE, MMSE, detection theory
+├── Neural Networks/                     # CIFAR-10 classification (MLP, CNN, RBF, SVM)
+├── Operating Systems/                   # Process management, IPC, shell scripting
+├── Optimization Techniques/             # Gradient descent, constrained optimization, genetic algorithms
+├── Pattern Recognition & ML/            # PCA, K-NN, SVM, decision trees, random forest
+├── Real Time Embedded Systems/          # Producer-consumer, real-time stock data processing
+├── Robotics/                            # UR5 robot inverse kinematics, trajectory planning
+├── SE2_Project/                         # Software testing (Ava unit tests, Cypress E2E)
+├── Simulation-Modelling/                # Offline/online parameter estimation (LS, RLS)
+└── Telecommunication Systems/           # SNR optimization, parameter estimation
 ```
 
 ---
@@ -171,27 +195,31 @@ main.m  % Or the specific entry point file
 
 ### Programming Languages
 - **Python** - Machine learning, data analysis, image processing
-- **MATLAB** - Signal processing, control systems, simulations
-- **C** - Embedded systems, operating systems
-- **JavaScript** - Full-stack web development
-- **SQL** - Database design and queries
+- **MATLAB** - Signal processing, control systems, simulations, robotics
+- **C** - Embedded systems, operating systems, real-time applications
+- **JavaScript** - Full-stack web development (Node.js, React)
+- **SQL** - Database design, queries, stored procedures
 - **Bash** - Shell scripting and system administration
 
 ### Frameworks & Libraries
-- **PyTorch** - Deep learning framework
-- **Scikit-learn** - Machine learning algorithms
+- **PyTorch** - Deep learning framework for neural networks
+- **Scikit-learn** - Classical machine learning algorithms
 - **OpenCV** - Computer vision and image processing
 - **NumPy & Pandas** - Data manipulation and analysis
 - **Matplotlib & Seaborn** - Data visualization
 - **React** - Frontend development
-- **Node.js & Express** - Backend development
+- **Node.js & Express** - Backend development, REST APIs
 - **MySQL** - Relational database management
+- **libwebsockets** - WebSocket communication for real-time systems
+- **pthreads** - POSIX threading for concurrent programming
 
 ### Tools & Software
 - **4nec2** - Antenna modeling and simulation
 - **Jupyter Notebook** - Interactive computing environment
 - **Git** - Version control
-- **Ava & Cypress** - Testing frameworks
+- **Docker** - Containerization
+- **Ava** - JavaScript unit testing framework
+- **Cypress** - End-to-end testing framework
 
 ---
 
